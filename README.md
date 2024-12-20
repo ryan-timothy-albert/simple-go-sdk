@@ -50,7 +50,7 @@ For more information about the API: [Find out more about Swagger](http://swagger
 
 To add the SDK as a dependency to your project:
 ```bash
-go get openapi
+go get github.com/ryan-timothy-albert/simple-go-sdk
 ```
 <!-- End SDK Installation [installation] -->
 
