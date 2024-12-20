@@ -1,0 +1,13 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    petstore-oas:
+        inputs:
+            - location: openapi.json
+        registry:
+            location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas
+targets:
+    petstore:
+        target: go
+        source: petstore-oas
+        output: .

@@ -1,0 +1,29 @@
+speakeasyVersion: 1.456.1
+sources:
+    petstore-oas:
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:59ba2de81aadf2dcc4ded96adc86c17a3a6b6bc950a76758bf7cc52dcf3d0cff
+        sourceBlobDigest: sha256:77c1a8df1c9555fc226f5752722e51a65c55d424b60f49b7dbdf78e43cc41276
+        tags:
+            - latest
+            - 4.0.0
+targets:
+    petstore:
+        source: petstore-oas
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:59ba2de81aadf2dcc4ded96adc86c17a3a6b6bc950a76758bf7cc52dcf3d0cff
+        sourceBlobDigest: sha256:77c1a8df1c9555fc226f5752722e51a65c55d424b60f49b7dbdf78e43cc41276
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        petstore-oas:
+            inputs:
+                - location: openapi.json
+            registry:
+                location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas
+    targets:
+        petstore:
+            target: go
+            source: petstore-oas
+            output: .
