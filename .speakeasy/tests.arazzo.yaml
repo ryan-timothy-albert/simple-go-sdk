@@ -460,3 +460,73 @@ workflows:
               }
             type: simple
     x-speakeasy-test-group: user
+  - workflowId: petsStoreTuesday
+    steps:
+      - stepId: test
+        operationId: petsStoreTuesday
+        requestBody:
+          contentType: application/json
+          payload:
+            category:
+              id: 1
+              name: Dogs
+            id: 10
+            name: doggie
+            photoUrls:
+              - <value>
+              - <value>
+        successCriteria:
+          - condition: $statusCode == 200
+          - condition: $response.header.Content-Type == application/json
+          - context: $response.body
+            condition: |
+              {
+                "id": 10,
+                "name": "doggie",
+                "category": {
+                  "id": 1,
+                  "name": "Dogs"
+                },
+                "photoUrls": [
+                  "\u003cvalue\u003e",
+                  "\u003cvalue\u003e"
+                ]
+              }
+            type: simple
+    x-speakeasy-test-group: pet
+  - workflowId: myTestPetsTuesday
+    steps:
+      - stepId: test
+        operationId: myTestPetsTuesday
+        requestBody:
+          contentType: application/json
+          payload:
+            category:
+              id: 1
+              name: Dogs
+            id: 10
+            name: doggie
+            photoUrls:
+              - <value>
+              - <value>
+              - <value>
+        successCriteria:
+          - condition: $statusCode == 200
+          - condition: $response.header.Content-Type == application/json
+          - context: $response.body
+            condition: |
+              {
+                "id": 10,
+                "name": "doggie",
+                "category": {
+                  "id": 1,
+                  "name": "Dogs"
+                },
+                "photoUrls": [
+                  "\u003cvalue\u003e",
+                  "\u003cvalue\u003e",
+                  "\u003cvalue\u003e"
+                ]
+              }
+            type: simple
+    x-speakeasy-test-group: pet

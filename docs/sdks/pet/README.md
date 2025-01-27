@@ -12,6 +12,8 @@ Find out more dfdsiojfidjs
 
 * [PetsStoreMonday](#petsstoremonday) - Update an existing pet
 * [MyTestPets](#mytestpets) - Add a new pet to the store
+* [PetsStoreTuesday](#petsstoretuesday) - Update an existing pet
+* [MyTestPetsTuesday](#mytestpetstuesday) - Add a new pet to the store
 * [FindPetsByStatusTypes](#findpetsbystatustypes) - Finds Pets by status
 * [FindPetsByTags](#findpetsbytags) - Finds Pets by tags
 * [GetPetByIDS](#getpetbyids) - Find pet by ID
@@ -138,6 +140,134 @@ func main() {
 ### Response
 
 **[*operations.MyTestPetsResponse](../../models/operations/mytestpetsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| apierrors.APIError | 4XX, 5XX           | \*/\*              |
+
+## PetsStoreTuesday
+
+Update an existing pet by Id
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"openapi"
+	"openapi/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+    
+    s := openapi.New(
+        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Pet.PetsStoreTuesday(ctx, components.Pet{
+        ID: openapi.Int64(10),
+        Name: "doggie",
+        Category: &components.Category{
+            ID: openapi.Int64(1),
+            Name: openapi.String("Dogs"),
+        },
+        PhotoUrls: []string{
+            "<value>",
+            "<value>",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Pet != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `request`                                                | [components.Pet](../../models/components/pet.md)         | :heavy_check_mark:                                       | The request object to use for the request.               |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.PetsStoreTuesdayResponse](../../models/operations/petsstoretuesdayresponse.md), error**
+
+### Errors
+
+| Error Type                     | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| apierrors.APIErrorInvalidInput | 400                            | application/json               |
+| apierrors.APIErrorUnauthorized | 401                            | application/json               |
+| apierrors.APIErrorNotFound     | 404                            | application/json               |
+| apierrors.APIError             | 4XX, 5XX                       | \*/\*                          |
+
+## MyTestPetsTuesday
+
+Add a new pet to the store
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"openapi"
+	"openapi/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+    
+    s := openapi.New(
+        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Pet.MyTestPetsTuesday(ctx, components.Pet{
+        ID: openapi.Int64(10),
+        Name: "doggie",
+        Category: &components.Category{
+            ID: openapi.Int64(1),
+            Name: openapi.String("Dogs"),
+        },
+        PhotoUrls: []string{
+            "<value>",
+            "<value>",
+            "<value>",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Pet != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `request`                                                | [components.Pet](../../models/components/pet.md)         | :heavy_check_mark:                                       | The request object to use for the request.               |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.MyTestPetsTuesdayResponse](../../models/operations/mytestpetstuesdayresponse.md), error**
 
 ### Errors
 

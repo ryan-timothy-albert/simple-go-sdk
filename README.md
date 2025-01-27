@@ -159,6 +159,8 @@ func main() {
 
 * [PetsStoreMonday](docs/sdks/pet/README.md#petsstoremonday) - Update an existing pet
 * [MyTestPets](docs/sdks/pet/README.md#mytestpets) - Add a new pet to the store
+* [PetsStoreTuesday](docs/sdks/pet/README.md#petsstoretuesday) - Update an existing pet
+* [MyTestPetsTuesday](docs/sdks/pet/README.md#mytestpetstuesday) - Add a new pet to the store
 * [FindPetsByStatusTypes](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 * [FindPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 * [GetPetByIDS](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID

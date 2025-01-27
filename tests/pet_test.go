@@ -247,3 +247,83 @@ func TestPet_UploadFile(t *testing.T) {
 	assert.Equal(t, &components.APIResponse{}, res.APIResponse)
 
 }
+
+func TestPet_PetsStoreTuesday(t *testing.T) {
+	ctx := context.Background()
+
+	s := openapi.New(
+		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
+		openapi.WithClient(createTestHTTPClient("petsStoreTuesday")),
+		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
+
+	res, err := s.Pet.PetsStoreTuesday(ctx, components.Pet{
+		ID:   openapi.Int64(10),
+		Name: "doggie",
+		Category: &components.Category{
+			ID:   openapi.Int64(1),
+			Name: openapi.String("Dogs"),
+		},
+		PhotoUrls: []string{
+			"<value>",
+			"<value>",
+		},
+	})
+	require.NoError(t, err)
+	assert.Equal(t, 200, res.HTTPMeta.Response.StatusCode)
+	assert.NotNil(t, res.Pet)
+	assert.Equal(t, &components.Pet{
+		ID:   openapi.Int64(10),
+		Name: "doggie",
+		Category: &components.Category{
+			ID:   openapi.Int64(1),
+			Name: openapi.String("Dogs"),
+		},
+		PhotoUrls: []string{
+			"<value>",
+			"<value>",
+		},
+	}, res.Pet)
+
+}
+
+func TestPet_MyTestPetsTuesday(t *testing.T) {
+	ctx := context.Background()
+
+	s := openapi.New(
+		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
+		openapi.WithClient(createTestHTTPClient("myTestPetsTuesday")),
+		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
+
+	res, err := s.Pet.MyTestPetsTuesday(ctx, components.Pet{
+		ID:   openapi.Int64(10),
+		Name: "doggie",
+		Category: &components.Category{
+			ID:   openapi.Int64(1),
+			Name: openapi.String("Dogs"),
+		},
+		PhotoUrls: []string{
+			"<value>",
+			"<value>",
+			"<value>",
+		},
+	})
+	require.NoError(t, err)
+	assert.Equal(t, 200, res.HTTPMeta.Response.StatusCode)
+	assert.NotNil(t, res.Pet)
+	assert.Equal(t, &components.Pet{
+		ID:   openapi.Int64(10),
+		Name: "doggie",
+		Category: &components.Category{
+			ID:   openapi.Int64(1),
+			Name: openapi.String("Dogs"),
+		},
+		PhotoUrls: []string{
+			"<value>",
+			"<value>",
+			"<value>",
+		},
+	}, res.Pet)
+
+}
