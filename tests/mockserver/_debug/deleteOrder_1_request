@@ -3,7 +3,7 @@ Host: localhost:18080
 Accept: application/json
 Accept-Encoding: gzip
 Api_key: <YOUR_API_KEY_HERE>
-User-Agent: speakeasy-sdk/go 0.1.3 2.495.1 4.0.0 openapi
-X-Speakeasy-Test-Instance-Id: 32CC8BF5-DD31-4AA3-4EF6-0C02D47A9E7C
+User-Agent: speakeasy-sdk/go 0.1.4 2.495.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: E75B7217-AB54-6209-E16C-C97FD12B301F
 X-Speakeasy-Test-Name: deleteOrder
 

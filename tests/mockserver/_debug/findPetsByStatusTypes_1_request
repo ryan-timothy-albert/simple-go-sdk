@@ -3,7 +3,7 @@ Host: localhost:18080
 Accept: application/json
 Accept-Encoding: gzip
 Api_key: <YOUR_API_KEY_HERE>
-User-Agent: speakeasy-sdk/go 0.1.3 2.495.1 4.0.0 openapi
-X-Speakeasy-Test-Instance-Id: 8DBD6E2E-3B66-C459-FCCC-0D9AA875CE69
+User-Agent: speakeasy-sdk/go 0.1.4 2.495.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: E55792AA-FC05-B7BE-C75D-190774330D44
 X-Speakeasy-Test-Name: findPetsByStatusTypes
 

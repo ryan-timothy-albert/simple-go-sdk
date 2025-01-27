@@ -5,8 +5,8 @@ Accept-Encoding: gzip
 Api_key: <YOUR_API_KEY_HERE>
 Content-Length: 93
 Content-Type: application/json
-User-Agent: speakeasy-sdk/go 0.1.3 2.495.1 4.0.0 openapi
-X-Speakeasy-Test-Instance-Id: F5994792-E525-7D1A-B094-EFFFE6832646
+User-Agent: speakeasy-sdk/go 0.1.4 2.495.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: 3C2B5297-6744-4E22-CB12-C4C984A95E5E
 X-Speakeasy-Test-Name: petsStoreMonday
 
 {"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["\u003cvalue\u003e"]}
