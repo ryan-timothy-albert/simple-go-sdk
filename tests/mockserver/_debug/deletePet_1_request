@@ -1,0 +1,9 @@
+DELETE /pet/441876 HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+User-Agent: speakeasy-sdk/go 0.1.3 2.495.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: E6957B12-1297-F418-6A2A-074941AA78B6
+X-Speakeasy-Test-Name: deletePet
+

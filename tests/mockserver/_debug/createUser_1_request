@@ -1,0 +1,12 @@
+POST /user HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+Content-Length: 143
+Content-Type: application/json
+User-Agent: speakeasy-sdk/go 0.1.3 2.495.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: 48243225-92D5-9A0F-C107-CA5123D403B9
+X-Speakeasy-Test-Name: createUser
+
+{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}

@@ -1,0 +1,12 @@
+PUT /user/Dandre_Hand41 HTTP/1.1
+Host: localhost:18080
+Accept: */*
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+Content-Length: 143
+Content-Type: application/json
+User-Agent: speakeasy-sdk/go 0.1.3 2.495.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: CC1D6568-AA88-8176-84B8-9F4E4948DF03
+X-Speakeasy-Test-Name: updateUser
+
+{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}

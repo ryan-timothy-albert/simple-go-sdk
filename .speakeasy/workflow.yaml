@@ -10,6 +10,8 @@ targets:
     petstore:
         target: go
         source: petstore-oas
+        testing:
+            enabled: true
         output: .
         codeSamples:
             registry:

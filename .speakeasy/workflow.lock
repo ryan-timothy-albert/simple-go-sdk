@@ -1,4 +1,4 @@
-speakeasyVersion: 1.459.0
+speakeasyVersion: 1.476.2
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
@@ -14,8 +14,6 @@ targets:
         sourceNamespace: petstore-oas
         sourceRevisionDigest: sha256:b1d41d3de9eb1f6122560c06689425c693eba247541142d4ee69c28efd6ad3bf
         sourceBlobDigest: sha256:77c1a8df1c9555fc226f5752722e51a65c55d424b60f49b7dbdf78e43cc41276
-        codeSamplesNamespace: petstore-oas-go-code-samples
-        codeSamplesRevisionDigest: sha256:dd5921ed4b1e36e0a200fc3361658f0b8497278e0d192a295a6f4da07d076e11
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -34,3 +32,5 @@ workflow:
                 registry:
                     location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas-go-code-samples
                 blocking: false
+            testing:
+                enabled: true

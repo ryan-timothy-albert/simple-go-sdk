@@ -157,6 +157,7 @@ package main
 import(
 	"context"
 	"openapi"
+	"openapi/models/operations"
 	"log"
 )
 
@@ -167,7 +168,7 @@ func main() {
         openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Pet.FindPetsByStatusTypes(ctx, nil)
+    res, err := s.Pet.FindPetsByStatusTypes(ctx, operations.StatusAvailable.ToPointer())
     if err != nil {
         log.Fatal(err)
     }
