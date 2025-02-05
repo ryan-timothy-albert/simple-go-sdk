@@ -22,21 +22,18 @@ on:
 
 jobs:
   generate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run SDK Generation Workflow
-        uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15.39.0
-        with:
-          force: ${{ github.event.inputs.force }}
-          mode: pr
-          set_version: ${{ github.event.inputs.set_version }}
-          target: petstore
-        env:
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SPEAKEASY_API_KEY: ${{ secrets.SPEAKEASY_API_KEY }}
+    uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15.39.0
+    with:
+      force: ${{ github.event.inputs.force }}
+      mode: pr
+      set_version: ${{ github.event.inputs.set_version }}
+      target: petstore
+    secrets:
+      github_access_token: ${{ secrets.GITHUB_TOKEN }}  # ✅ Must be explicitly passed
+      speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
 
   dispatch-sdk-test:
-    needs: generate  # Ensures this runs AFTER 'generate'
+    needs: generate  # Ensures 'dispatch-sdk-test' runs AFTER 'generate'
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch SDK Test Workflow
