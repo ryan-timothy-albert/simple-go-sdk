@@ -42,7 +42,7 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{
-              "ref": "${{ github.ref }}",
+              "ref": "speakeasy-sdk-regen-1738792290",
               "inputs": {
                 "target": "petstore"
               }
