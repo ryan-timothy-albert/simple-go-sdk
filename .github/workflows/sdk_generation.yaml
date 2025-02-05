@@ -39,7 +39,7 @@ jobs:
       - name: Dispatch SDK Test Workflow
         run: |
           curl -X POST -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.ACTION_DISPATCH_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{
               "ref": "speakeasy-sdk-regen-1738792290",
