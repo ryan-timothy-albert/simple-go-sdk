@@ -15,17 +15,6 @@ permissions:
       - .speakeasy/gen.lock
     branches:
       - main
-  workflow_call:
-    inputs:
-      target:
-        description: Specific target to test
-        required: true
-        type: string
-    secrets:
-      github_access_token:
-        required: true
-      speakeasy_api_key:
-        required: true
 jobs:
   test:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.39.0
