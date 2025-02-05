@@ -31,6 +31,6 @@ jobs:
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
   test-petstore:
     needs: generate  # Ensures this runs AFTER 'generate'
-    uses: ryan-timothy-albert/simple-go-sdk/.github/workflows/sdk_test.yaml@main  # Ensure this points to sdk-test.yaml's branch
+    uses: ryan-timothy-albert/simple-go-sdk/.github/workflows/sdk_test.yaml@speakeasy-sdk-regen-1738792290  # Ensure this points to sdk-test.yaml's branch
     with:
       target: petstore
