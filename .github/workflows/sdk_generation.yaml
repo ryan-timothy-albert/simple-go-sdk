@@ -4,7 +4,8 @@ permissions:
   contents: write
   pull-requests: write
   statuses: write
-"on":
+
+on:
   workflow_dispatch:
     inputs:
       force:
@@ -12,22 +13,30 @@ permissions:
         type: boolean
         default: false
       set_version:
-        description: optionally set a specific SDK version
+        description: Optionally set a specific SDK version
         type: string
   schedule:
     - cron: 0 0 * * *
   pull_request:
     types: [labeled, unlabeled]
+
 jobs:
   generate:
-    uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15.39.0
-    with:
-      force: ${{ github.event.inputs.force }}
-      mode: pr
-      set_version: ${{ github.event.inputs.set_version }}
-      target: petstore
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run SDK Generation Workflow
+        uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15.39.0
+        with:
+          force: ${{ github.event.inputs.force }}
+          mode: pr
+          set_version: ${{ github.event.inputs.set_version }}
+          target: petstore
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SPEAKEASY_API_KEY: ${{ secrets.SPEAKEASY_API_KEY }}
+
   dispatch-sdk-test:
-    needs: generate  # Ensures 'dispatch-sdk-test' runs AFTER 'generate'
+    needs: generate  # Ensures this runs AFTER 'generate'
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch SDK Test Workflow
