@@ -1,4 +1,4 @@
-name: Test [SDK Name]
+name: Test Petstore
 permissions:
   checks: write
   contents: write
