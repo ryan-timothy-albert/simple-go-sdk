@@ -29,3 +29,8 @@ jobs:
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
+  test-petstore:
+    needs: generate  # Ensures this runs AFTER 'generate'
+    uses: ryan-timothy-albert/simple-go-sdk/.github/workflows/sdk-test.yaml@main  # Ensure this points to sdk-test.yaml's branch
+    with:
+      target: petstore
