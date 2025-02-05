@@ -47,4 +47,4 @@ jobs:
                 "target": "petstore"
               }
             }' \
-            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/sdk-test.yaml/dispatches"
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/sdk_test.yaml/dispatches"
