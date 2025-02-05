@@ -22,7 +22,7 @@ permissions:
           required: true
           type: string
 jobs:
-  generate:
+  test:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.39.0
     with:
       target: ${{ github.event.inputs.target }}
