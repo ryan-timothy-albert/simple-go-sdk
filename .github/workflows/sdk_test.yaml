@@ -15,6 +15,9 @@ permissions:
       - .speakeasy/gen.lock
     branches:
       - main
+  push:
+    branches:
+      - 'speakeasy-sdk-regen-*'
 jobs:
   test:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.39.0
