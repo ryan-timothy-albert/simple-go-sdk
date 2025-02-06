@@ -12,12 +12,36 @@ permissions:
         type: string
   pull_request:
     paths:
-      - .speakeasy/gen.lock
+      - ./**
     branches:
       - main
   push:
     branches:
       - 'speakeasy-sdk-regen-*'
+name: Test Petstore
+permissions:
+  checks: write
+  contents: write
+  pull-requests: write
+  statuses: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Specific target to test
+        type: string
+  pull_request:
+    paths:
+      - ./**
+    branches:
+      - main
+  push:
+    branches:
+      - 'speakeasy-sdk-regen-*'
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   test:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.39.0
