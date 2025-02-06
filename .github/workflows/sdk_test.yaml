@@ -4,26 +4,6 @@ permissions:
   contents: write
   pull-requests: write
   statuses: write
-"on":
-  workflow_dispatch:
-    inputs:
-      target:
-        description: Specific target to test
-        type: string
-  pull_request:
-    paths:
-      - ./**
-    branches:
-      - main
-  push:
-    branches:
-      - 'speakeasy-sdk-regen-*'
-name: Test Petstore
-permissions:
-  checks: write
-  contents: write
-  pull-requests: write
-  statuses: write
 
 on:
   workflow_dispatch:
@@ -46,7 +26,7 @@ jobs:
   test:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.39.0
     with:
-      target: ${{ github.event.inputs.target }}
+      target: ${{ github.event.inputs.target || 'petstore' }}
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
