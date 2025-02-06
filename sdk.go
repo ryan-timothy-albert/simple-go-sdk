@@ -210,9 +210,9 @@ func New(opts ...SDKOption) *SDK {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "4.0.0",
-			SDKVersion:        "0.1.5",
-			GenVersion:        "2.495.1",
-			UserAgent:         "speakeasy-sdk/go 0.1.5 2.495.1 4.0.0 openapi",
+			SDKVersion:        "0.2.0",
+			GenVersion:        "2.505.0",
+			UserAgent:         "speakeasy-sdk/go 0.2.0 2.505.0 4.0.0 openapi",
 			ServerDefaults: []map[string]string{
 				{
 					"environment": "prod",
