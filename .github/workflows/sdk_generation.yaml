@@ -31,20 +31,3 @@ jobs:
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}  # ✅ Must be explicitly passed
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
-
-  dispatch-sdk-test:
-    needs: generate  # Ensures 'dispatch-sdk-test' runs AFTER 'generate'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dispatch SDK Test Workflow
-        run: |
-          curl -X POST -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: Bearer ${{ secrets.ACTION_DISPATCH_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "ref": "speakeasy-sdk-regen-1738792290",
-              "inputs": {
-                "target": "petstore"
-              }
-            }' \
-            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/sdk_test.yaml/dispatches"
