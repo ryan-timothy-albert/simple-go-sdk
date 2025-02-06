@@ -16,9 +16,9 @@ on:
       - ./**
     branches:
       - main
-  push:
-    branches:
-      - 'speakeasy-sdk-regen-*'
+  # push:
+  #   branches:
+  #     - 'speakeasy-sdk-regen-*'
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
