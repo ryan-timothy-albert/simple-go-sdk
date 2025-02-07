@@ -20,8 +20,6 @@ on:
   push:
       branches:
         - speakeasy-sdk-regen-*
-  issue_comment:
-    types: [created]
 jobs:
   test:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.39.0
