@@ -9,7 +9,6 @@ import (
 	"openapi"
 	"openapi/internal/utils"
 	"openapi/models/components"
-	"openapi/models/operations"
 	"testing"
 )
 
@@ -99,7 +98,7 @@ func TestPet_FindPetsByStatusTypes(t *testing.T) {
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	res, err := s.Pet.FindPetsByStatusTypes(ctx, operations.StatusAvailable.ToPointer())
+	res, err := s.Pet.FindPetsByStatusTypes(ctx, nil)
 	require.NoError(t, err)
 	assert.Equal(t, 200, res.HTTPMeta.Response.StatusCode)
 	assert.NotNil(t, res.Pets)
