@@ -3,17 +3,17 @@ id: a42e6bcf-a188-4465-a802-4f16cf538a71
 management:
   docChecksum: 857ef722c7de932be28b466fa0fdaabc
   docVersion: 4.0.0
-  speakeasyVersion: 1.476.1
-  generationVersion: 2.495.1
-  releaseVersion: 0.1.5
-  configChecksum: 94d55899443b4feb8677b59b75f2e01b
+  speakeasyVersion: 1.487.0
+  generationVersion: 2.506.0
+  releaseVersion: 0.2.0
+  configChecksum: 9477f6f1938a58e764d1abcfb95589c7
   repoURL: https://github.com/ryan-timothy-albert/simple-go-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.6
-    core: 3.6.9
+    constsAndDefaults: 0.1.7
+    core: 3.7.0
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.2
     flattening: 2.81.1
@@ -26,7 +26,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.83.2
     sdkHooks: 0.1.0
-    tests: 0.10.5
+    tests: 0.11.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
