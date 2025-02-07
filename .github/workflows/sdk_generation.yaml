@@ -31,3 +31,4 @@ jobs:
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}  # ✅ Must be explicitly passed
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
+      pr_creation_pat: ${{ secrets.ACTION_DISPATCH_TOKEN }}
