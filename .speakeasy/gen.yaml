@@ -1,4 +1,4 @@
-configVersion: 2.0.0
+configVersion: 2.0.1
 generation:
   sdkClassName: SDK
   maintainOpenAPIOrder: true
