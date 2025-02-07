@@ -20,6 +20,7 @@ on:
   push: # if you have setup your own ACTION_PAT feel free to remove this trigger
       branches:
         - speakeasy-sdk-regen-*
+        - main
 jobs:
   test:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.39.0
