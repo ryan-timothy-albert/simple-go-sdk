@@ -14,7 +14,7 @@ on:
         required: true
   pull_request:
     paths:
-      - '**'
+      - '.speakeasy/gen.lock'
     branches:
       - main
   push: # if you have setup your own PR_CREATION_PAT feel free to remove this trigger
