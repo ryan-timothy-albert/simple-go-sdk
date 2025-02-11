@@ -1,4 +1,4 @@
-name: Test Petstore
+name: Test
 permissions:
   checks: write
   contents: write
