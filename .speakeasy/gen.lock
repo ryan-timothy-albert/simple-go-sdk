@@ -3,10 +3,10 @@ id: a42e6bcf-a188-4465-a802-4f16cf538a71
 management:
   docChecksum: 857ef722c7de932be28b466fa0fdaabc
   docVersion: 4.0.0
-  speakeasyVersion: 1.487.0
+  speakeasyVersion: 1.488.0
   generationVersion: 2.506.0
-  releaseVersion: 0.2.0
-  configChecksum: 9477f6f1938a58e764d1abcfb95589c7
+  releaseVersion: 0.2.1
+  configChecksum: cd0dd72e59cd5f848ae8a07ede97e271
   repoURL: https://github.com/ryan-timothy-albert/simple-go-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-go-sdk
 features:
