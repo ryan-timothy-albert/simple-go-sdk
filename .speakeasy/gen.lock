@@ -5,8 +5,8 @@ management:
   docVersion: 4.0.0
   speakeasyVersion: 1.488.0
   generationVersion: 2.506.0
-  releaseVersion: 0.2.3
-  configChecksum: be47358323b85f5ace9cbecee6b06742
+  releaseVersion: 0.2.4
+  configChecksum: 664e5d874b95c545eb05877308a9b676
   repoURL: https://github.com/ryan-timothy-albert/simple-go-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-go-sdk
 features:
