@@ -1,4 +1,4 @@
-name: Test
+name: Test SDKs
 permissions:
   checks: write
   contents: write
@@ -14,7 +14,7 @@ on:
         required: true
   pull_request:
     paths:
-      - '.speakeasy/gen.lock'
+      - '**'
     branches:
       - main
 jobs:
