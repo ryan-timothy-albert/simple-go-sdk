@@ -1,9 +1,0 @@
-DELETE /user/Demetris_Schmitt HTTP/1.1
-Host: localhost:18080
-Accept: application/json
-Accept-Encoding: gzip
-Api_key: <YOUR_API_KEY_HERE>
-User-Agent: speakeasy-sdk/go 0.1.4 2.495.1 4.0.0 openapi
-X-Speakeasy-Test-Instance-Id: D41BA89A-CEE9-CEE2-1075-CA4A87378E07
-X-Speakeasy-Test-Name: deleteUser
-
