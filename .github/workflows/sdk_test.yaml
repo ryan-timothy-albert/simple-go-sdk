@@ -9,9 +9,8 @@ on:
   workflow_dispatch:
     inputs:
       target:
-        description: Specific target to test
+        description: Provided SDK target to run tests for, (all) is valid
         type: string
-        required: true
   pull_request:
     paths:
       - '**'
