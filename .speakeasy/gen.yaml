@@ -9,13 +9,14 @@ generation:
     nameResolutionDec2023: true
     parameterOrderingFeb2024: true
     requestResponseComponentNamesFeb2024: true
+    securityFeb2025: false
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
   tests:
     generateNewTests: true
 go:
-  version: 0.2.4
+  version: 0.3.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   clientServerStatusCodesAsErrors: true
