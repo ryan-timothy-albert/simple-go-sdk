@@ -69,3 +69,13 @@ Based on:
 - [go v0.3.0] .
 ### Releases
 - [Go v0.3.0] https://github.com/ryan-timothy-albert/simple-go-sdk/releases/tag/v0.3.0 - .
+
+## 2025-02-19 01:20:34
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.495.1 (2.515.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.4.0] .
+### Releases
+- [Go v0.4.0] https://github.com/ryan-timothy-albert/simple-go-sdk/releases/tag/v0.4.0 - .
