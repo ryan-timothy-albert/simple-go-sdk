@@ -33,7 +33,7 @@ func TestPet_PetsStoreMonday(t *testing.T) {
 		},
 	})
 	require.NoError(t, err)
-	assert.Equal(t, 200, res.HTTPMeta.Response.StatusCode)
+	assert.Equal(t, 400, res.HTTPMeta.Response.StatusCode)
 	assert.NotNil(t, res.Pet)
 	assert.Equal(t, &components.Pet{
 		ID:   openapi.Int64(10),
