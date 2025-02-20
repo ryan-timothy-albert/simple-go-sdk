@@ -381,11 +381,55 @@ func main() {
 ### Server Variables
 
 The default server `https://{environment}.petstore.io` contains variables and is set to `https://prod.petstore.io` by default. To override default values, the following options are available when initializing the SDK client instance:
- * `WithEnvironment(environment ServerEnvironment)`
+
+| Variable      | Option                                           | Supported Values                           | Default  | Description                                                   |
+| ------------- | ------------------------------------------------ | ------------------------------------------ | -------- | ------------------------------------------------------------- |
+| `environment` | `WithEnvironment(environment ServerEnvironment)` | - `"prod"`<br/>- `"staging"`<br/>- `"dev"` | `"prod"` | The environment name. Defaults to the production environment. |
+
+#### Example
+
+```go
+package main
+
+import (
+	"context"
+	"log"
+	"openapi"
+	"openapi/models/components"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := openapi.New(
+		openapi.WithEnvironment("dev"),
+		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
+
+	res, err := s.Pet.PetsStoreMonday(ctx, components.Pet{
+		ID:   openapi.Int64(10),
+		Name: "doggie",
+		Category: &components.Category{
+			ID:   openapi.Int64(1),
+			Name: openapi.String("Dogs"),
+		},
+		PhotoUrls: []string{
+			"<value>",
+		},
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.Pet != nil {
+		// handle response
+	}
+}
+
+```
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally using the `WithServerURL(serverURL string)` option when initializing the SDK client instance. For example:
+The default server can be overridden globally using the `WithServerURL(serverURL string)` option when initializing the SDK client instance. For example:
 ```go
 package main
 
