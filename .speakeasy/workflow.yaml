@@ -15,3 +15,5 @@ targets:
             registry:
                 location: registry.speakeasyapi.dev/ryan-local/ryan-testing-demo/petstore-oas-go-code-samples
             blocking: false
+        testing:
+            enabled: true

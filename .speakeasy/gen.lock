@@ -6,7 +6,7 @@ management:
   speakeasyVersion: 1.500.1
   generationVersion: 2.522.1
   releaseVersion: 0.4.0
-  configChecksum: 26c2703c9e86303d5f8e1c7e793559e8
+  configChecksum: 139d73bd5e97966e4181e227fc0ed977
   repoURL: https://github.com/ryan-timothy-albert/simple-go-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-go-sdk
 features:
@@ -22,9 +22,11 @@ features:
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.2
     intellisenseMarkdownSupport: 0.1.0
+    mockServer: 0.1.0
     responseFormat: 0.1.2
     retries: 2.83.2
     sdkHooks: 0.1.0
+    tests: 0.13.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -129,6 +131,102 @@ generatedFiles:
   - retry/config.go
   - sdk.go
   - store.go
+  - tests/files.go
+  - tests/mockserver/Dockerfile
+  - tests/mockserver/Makefile
+  - tests/mockserver/README.md
+  - tests/mockserver/go.mod
+  - tests/mockserver/go.sum
+  - tests/mockserver/internal/handler/assert/contenttype.go
+  - tests/mockserver/internal/handler/assert/header.go
+  - tests/mockserver/internal/handler/assert/parameter.go
+  - tests/mockserver/internal/handler/assert/pointer.go
+  - tests/mockserver/internal/handler/assert/security.go
+  - tests/mockserver/internal/handler/doc.go
+  - tests/mockserver/internal/handler/generated_handler.go
+  - tests/mockserver/internal/handler/generated_handlers.go
+  - tests/mockserver/internal/handler/pathdeletepetpetid.go
+  - tests/mockserver/internal/handler/pathdeletestoreorderorderid.go
+  - tests/mockserver/internal/handler/pathdeleteuserusername.go
+  - tests/mockserver/internal/handler/pathgetpetfindbystatus.go
+  - tests/mockserver/internal/handler/pathgetpetfindbytags.go
+  - tests/mockserver/internal/handler/pathgetpetpetid.go
+  - tests/mockserver/internal/handler/pathgetstoreinventory.go
+  - tests/mockserver/internal/handler/pathgetstoreorderorderid.go
+  - tests/mockserver/internal/handler/pathgetuserlogin.go
+  - tests/mockserver/internal/handler/pathgetuserlogout.go
+  - tests/mockserver/internal/handler/pathgetuserusername.go
+  - tests/mockserver/internal/handler/pathpostpet.go
+  - tests/mockserver/internal/handler/pathpostpetpetiduploadimage.go
+  - tests/mockserver/internal/handler/pathpostpetsme.go
+  - tests/mockserver/internal/handler/pathpoststoreorder.go
+  - tests/mockserver/internal/handler/pathpostuser.go
+  - tests/mockserver/internal/handler/pathpostusercreatewithlist.go
+  - tests/mockserver/internal/handler/pathputpet.go
+  - tests/mockserver/internal/handler/pathputpetsme.go
+  - tests/mockserver/internal/handler/pathputuserusername.go
+  - tests/mockserver/internal/handler/values/files.go
+  - tests/mockserver/internal/logging/doc.go
+  - tests/mockserver/internal/logging/formats.go
+  - tests/mockserver/internal/logging/http_file.go
+  - tests/mockserver/internal/logging/http_logger.go
+  - tests/mockserver/internal/logging/levels.go
+  - tests/mockserver/internal/logging/logger.go
+  - tests/mockserver/internal/logging/oas_operation.go
+  - tests/mockserver/internal/logging/oas_operation_call.go
+  - tests/mockserver/internal/sdk/models/components/apiresponse.go
+  - tests/mockserver/internal/sdk/models/components/category.go
+  - tests/mockserver/internal/sdk/models/components/httpmetadata.go
+  - tests/mockserver/internal/sdk/models/components/order.go
+  - tests/mockserver/internal/sdk/models/components/pet.go
+  - tests/mockserver/internal/sdk/models/components/security.go
+  - tests/mockserver/internal/sdk/models/components/tag.go
+  - tests/mockserver/internal/sdk/models/components/user.go
+  - tests/mockserver/internal/sdk/models/operations/createuser.go
+  - tests/mockserver/internal/sdk/models/operations/createuserswithlistinput.go
+  - tests/mockserver/internal/sdk/models/operations/deleteorder.go
+  - tests/mockserver/internal/sdk/models/operations/deletepet.go
+  - tests/mockserver/internal/sdk/models/operations/deleteuser.go
+  - tests/mockserver/internal/sdk/models/operations/findpetsbystatustypes.go
+  - tests/mockserver/internal/sdk/models/operations/findpetsbytags.go
+  - tests/mockserver/internal/sdk/models/operations/getinventory.go
+  - tests/mockserver/internal/sdk/models/operations/getorderbyid.go
+  - tests/mockserver/internal/sdk/models/operations/getpetbyids.go
+  - tests/mockserver/internal/sdk/models/operations/getuserbyname.go
+  - tests/mockserver/internal/sdk/models/operations/loginuser.go
+  - tests/mockserver/internal/sdk/models/operations/logoutuser.go
+  - tests/mockserver/internal/sdk/models/operations/mytestpets.go
+  - tests/mockserver/internal/sdk/models/operations/mytestpetstuesday.go
+  - tests/mockserver/internal/sdk/models/operations/petsstoremonday.go
+  - tests/mockserver/internal/sdk/models/operations/petsstoretuesday.go
+  - tests/mockserver/internal/sdk/models/operations/placeorder.go
+  - tests/mockserver/internal/sdk/models/operations/updateuser.go
+  - tests/mockserver/internal/sdk/models/operations/uploadfile.go
+  - tests/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
+  - tests/mockserver/internal/sdk/models/sdkerrors/apierrornotfound.go
+  - tests/mockserver/internal/sdk/models/sdkerrors/apierrorunauthorized.go
+  - tests/mockserver/internal/sdk/types/bigint.go
+  - tests/mockserver/internal/sdk/types/date.go
+  - tests/mockserver/internal/sdk/types/datetime.go
+  - tests/mockserver/internal/sdk/types/decimal.go
+  - tests/mockserver/internal/sdk/types/pointers.go
+  - tests/mockserver/internal/sdk/utils/json.go
+  - tests/mockserver/internal/sdk/utils/reflect.go
+  - tests/mockserver/internal/sdk/utils/sort.go
+  - tests/mockserver/internal/server/doc.go
+  - tests/mockserver/internal/server/generated_handlers.go
+  - tests/mockserver/internal/server/internal_handlers.go
+  - tests/mockserver/internal/server/server.go
+  - tests/mockserver/internal/server/server_option.go
+  - tests/mockserver/internal/server/templates/log/index.html.tmpl
+  - tests/mockserver/internal/server/templates/log/operation.html.tmpl
+  - tests/mockserver/internal/server/templates/log/style.css.tmpl
+  - tests/mockserver/internal/tracking/requesttracker.go
+  - tests/mockserver/main.go
+  - tests/pet_test.go
+  - tests/store_test.go
+  - tests/testclient.go
+  - tests/user_test.go
   - types/bigint.go
   - types/date.go
   - types/datetime.go
@@ -349,4 +447,24 @@ examples:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
 examplesVersion: 1.0.0
-generatedTests: {}
+generatedTests:
+  petsStoreMonday: "2025-02-21T09:15:50-08:00"
+  myTestPets: "2025-02-21T09:15:50-08:00"
+  petsStoreTuesday: "2025-02-21T09:15:50-08:00"
+  myTestPetsTuesday: "2025-02-21T09:15:50-08:00"
+  findPetsByStatusTypes: "2025-02-21T09:15:50-08:00"
+  findPetsByTags: "2025-02-21T09:15:50-08:00"
+  getPetByIDS: "2025-02-21T09:15:50-08:00"
+  deletePet: "2025-02-21T09:15:50-08:00"
+  uploadFile: "2025-02-21T09:15:50-08:00"
+  getInventory: "2025-02-21T09:15:50-08:00"
+  placeOrder: "2025-02-21T09:15:50-08:00"
+  getOrderById: "2025-02-21T09:15:50-08:00"
+  deleteOrder: "2025-02-21T09:15:50-08:00"
+  createUser: "2025-02-21T09:15:50-08:00"
+  createUsersWithListInput: "2025-02-21T09:15:50-08:00"
+  loginUser: "2025-02-21T09:15:50-08:00"
+  logoutUser: "2025-02-21T09:15:50-08:00"
+  getUserByName: "2025-02-21T09:15:50-08:00"
+  updateUser: "2025-02-21T09:15:50-08:00"
+  deleteUser: "2025-02-21T09:15:50-08:00"
