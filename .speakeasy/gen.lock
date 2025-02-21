@@ -447,24 +447,3 @@ examples:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
 examplesVersion: 1.0.0
-generatedTests:
-  petsStoreMonday: "2025-01-27T11:24:09-08:00"
-  myTestPets: "2025-01-27T11:24:09-08:00"
-  findPetsByStatusTypes: "2025-01-27T11:24:09-08:00"
-  findPetsByTags: "2025-01-27T11:24:09-08:00"
-  getPetByIDS: "2025-01-27T11:24:09-08:00"
-  deletePet: "2025-01-27T11:24:09-08:00"
-  uploadFile: "2025-01-27T11:24:09-08:00"
-  getInventory: "2025-01-27T11:24:09-08:00"
-  placeOrder: "2025-01-27T11:24:09-08:00"
-  getOrderById: "2025-01-27T11:24:09-08:00"
-  deleteOrder: "2025-01-27T11:24:09-08:00"
-  createUser: "2025-01-27T11:24:09-08:00"
-  createUsersWithListInput: "2025-01-27T11:24:09-08:00"
-  loginUser: "2025-01-27T11:24:09-08:00"
-  logoutUser: "2025-01-27T11:24:09-08:00"
-  getUserByName: "2025-01-27T11:24:09-08:00"
-  updateUser: "2025-01-27T11:24:09-08:00"
-  deleteUser: "2025-01-27T11:24:09-08:00"
-  petsStoreTuesday: "2025-01-27T11:44:46-08:00"
-  myTestPetsTuesday: "2025-01-27T11:44:46-08:00"
