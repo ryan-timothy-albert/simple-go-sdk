@@ -1,0 +1,10 @@
+POST /pet/565380/uploadImage HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+Content-Length: 0
+User-Agent: speakeasy-sdk/go 0.4.0 2.522.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: E2CCEFB3-416A-ED7A-B6A8-80819849A58A
+X-Speakeasy-Test-Name: uploadFile
+

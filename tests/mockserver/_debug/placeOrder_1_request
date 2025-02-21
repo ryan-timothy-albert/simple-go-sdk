@@ -1,0 +1,12 @@
+POST /store/order HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+Content-Length: 57
+Content-Type: application/json
+User-Agent: speakeasy-sdk/go 0.4.0 2.522.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: EFF47C13-8F41-A364-236F-A8B8D6112ED7
+X-Speakeasy-Test-Name: placeOrder
+
+{"id":10,"petId":198772,"quantity":7,"status":"approved"}

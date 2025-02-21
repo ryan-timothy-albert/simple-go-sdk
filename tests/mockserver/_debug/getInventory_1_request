@@ -1,0 +1,9 @@
+GET /store/inventory HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+User-Agent: speakeasy-sdk/go 0.4.0 2.522.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: D91266F4-0137-86DF-2549-83E8ADDA16AC
+X-Speakeasy-Test-Name: getInventory
+

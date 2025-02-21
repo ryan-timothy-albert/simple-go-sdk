@@ -1,0 +1,12 @@
+POST /petsme HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+Content-Length: 133
+Content-Type: application/json
+User-Agent: speakeasy-sdk/go 0.4.0 2.522.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: AB94EDE6-42D9-5240-448A-CE74B0C17D6F
+X-Speakeasy-Test-Name: myTestPetsTuesday
+
+{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["\u003cvalue\u003e","\u003cvalue\u003e","\u003cvalue\u003e"]}

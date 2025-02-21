@@ -1,0 +1,9 @@
+GET /user/login HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip
+Api_key: <YOUR_API_KEY_HERE>
+User-Agent: speakeasy-sdk/go 0.4.0 2.522.1 4.0.0 openapi
+X-Speakeasy-Test-Instance-Id: 327671C3-AC71-ACC9-0DF1-AD54BEF5E1E5
+X-Speakeasy-Test-Name: loginUser
+
