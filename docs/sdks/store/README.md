@@ -31,8 +31,9 @@ import(
 )
 
 func main() {
-    ctx := context.Background()
-    
+ctx := context.Background()
+
+
     s := openapi.New(
         openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
@@ -83,8 +84,9 @@ import(
 )
 
 func main() {
-    ctx := context.Background()
-    
+ctx := context.Background()
+
+
     s := openapi.New(
         openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
@@ -140,8 +142,9 @@ import(
 )
 
 func main() {
-    ctx := context.Background()
-    
+ctx := context.Background()
+
+
     s := openapi.New(
         openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
@@ -193,8 +196,9 @@ import(
 )
 
 func main() {
-    ctx := context.Background()
-    
+ctx := context.Background()
+
+
     s := openapi.New(
         openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
     )

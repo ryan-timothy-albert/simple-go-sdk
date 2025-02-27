@@ -15,9 +15,11 @@ import (
 func TestUser_CreateUser(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("createUser")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("createUser")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -50,9 +52,11 @@ func TestUser_CreateUser(t *testing.T) {
 func TestUser_CreateUsersWithListInput(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("createUsersWithListInput")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("createUsersWithListInput")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -87,9 +91,11 @@ func TestUser_CreateUsersWithListInput(t *testing.T) {
 func TestUser_LoginUser(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("loginUser")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("loginUser")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -104,9 +110,11 @@ func TestUser_LoginUser(t *testing.T) {
 func TestUser_LogoutUser(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("logoutUser")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("logoutUser")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -119,9 +127,11 @@ func TestUser_LogoutUser(t *testing.T) {
 func TestUser_GetUserByName(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("getUserByName")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("getUserByName")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -145,9 +155,11 @@ func TestUser_GetUserByName(t *testing.T) {
 func TestUser_UpdateUser(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("updateUser")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("updateUser")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -169,9 +181,11 @@ func TestUser_UpdateUser(t *testing.T) {
 func TestUser_DeleteUser(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("deleteUser")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("deleteUser")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 

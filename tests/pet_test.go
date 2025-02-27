@@ -15,9 +15,11 @@ import (
 func TestPet_PetsStoreMonday(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("petsStoreMonday")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("petsStoreMonday")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -53,9 +55,11 @@ func TestPet_PetsStoreMonday(t *testing.T) {
 func TestPet_MyTestPets(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("myTestPets")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("myTestPets")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -92,9 +96,11 @@ func TestPet_MyTestPets(t *testing.T) {
 func TestPet_PetsStoreTuesday(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("petsStoreTuesday")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("petsStoreTuesday")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -131,9 +137,11 @@ func TestPet_PetsStoreTuesday(t *testing.T) {
 func TestPet_MyTestPetsTuesday(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("myTestPetsTuesday")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("myTestPetsTuesday")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -172,9 +180,11 @@ func TestPet_MyTestPetsTuesday(t *testing.T) {
 func TestPet_FindPetsByStatusTypes(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("findPetsByStatusTypes")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("findPetsByStatusTypes")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -226,9 +236,11 @@ func TestPet_FindPetsByStatusTypes(t *testing.T) {
 func TestPet_FindPetsByTags(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("findPetsByTags")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("findPetsByTags")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -257,9 +269,11 @@ func TestPet_FindPetsByTags(t *testing.T) {
 func TestPet_GetPetByIDS(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("getPetByIDS")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("getPetByIDS")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -286,9 +300,11 @@ func TestPet_GetPetByIDS(t *testing.T) {
 func TestPet_DeletePet(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("deletePet")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("deletePet")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -313,9 +329,11 @@ func TestPet_DeletePet(t *testing.T) {
 func TestPet_UploadFile(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("uploadFile")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("uploadFile")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
