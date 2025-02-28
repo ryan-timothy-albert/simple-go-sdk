@@ -2,17 +2,20 @@ speakeasyVersion: 1.507.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:b3175feff7437c3d4998f9364ae290af0a38eba7939648ff32f41758c0aa2129
+        sourceRevisionDigest: sha256:69ef4d8b59e487d3b2ecc1eb3c2b64e3032b4561ec7ddb021b150355c866b6f9
         sourceBlobDigest: sha256:84cbc440d2f88ee8cfdead7866b2a34829b7b43a1181538c0b8ba874428c2286
         tags:
             - latest
+            - speakeasy-sdk-regen-1740703949
             - 4.0.0
 targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:b3175feff7437c3d4998f9364ae290af0a38eba7939648ff32f41758c0aa2129
+        sourceRevisionDigest: sha256:69ef4d8b59e487d3b2ecc1eb3c2b64e3032b4561ec7ddb021b150355c866b6f9
         sourceBlobDigest: sha256:84cbc440d2f88ee8cfdead7866b2a34829b7b43a1181538c0b8ba874428c2286
+        codeSamplesNamespace: petstore-oas-go-code-samples
+        codeSamplesRevisionDigest: sha256:da279454e7e407ebdd94ca520953a113727b96b889c485ad59328da3e324e7c7
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -21,7 +24,7 @@ workflow:
             inputs:
                 - location: openapi.json
             registry:
-                location: registry.speakeasyapi.dev/ryan-local/ryan-testing-demo/petstore-oas
+                location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas
     targets:
         petstore:
             target: go
@@ -29,7 +32,7 @@ workflow:
             output: .
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/ryan-local/ryan-testing-demo/petstore-oas-go-code-samples
+                    location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas-go-code-samples
                 blocking: false
             testing:
                 enabled: true
