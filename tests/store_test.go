@@ -15,9 +15,11 @@ import (
 func TestStore_GetInventory(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("getInventory")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("getInventory")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -35,9 +37,11 @@ func TestStore_GetInventory(t *testing.T) {
 func TestStore_PlaceOrder(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("placeOrder")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("placeOrder")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -62,9 +66,11 @@ func TestStore_PlaceOrder(t *testing.T) {
 func TestStore_GetOrderByID(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("getOrderById")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("getOrderById")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
@@ -84,9 +90,11 @@ func TestStore_GetOrderByID(t *testing.T) {
 func TestStore_DeleteOrder(t *testing.T) {
 	ctx := context.Background()
 
+	testHTTPClient := createTestHTTPClient("deleteOrder")
+
 	s := openapi.New(
 		openapi.WithServerURL(utils.GetEnv("TEST_SERVER_URL", "http://localhost:18080")),
-		openapi.WithClient(createTestHTTPClient("deleteOrder")),
+		openapi.WithClient(testHTTPClient),
 		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
